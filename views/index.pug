@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	div.header
+		h3 CONTACT ME
+		h3 #{message}
+
+	div.container
+		form( method="post", action="/send")
+			div.form-group
+				label NAME
+				input(class='form-control', name="name")
+			div.form-group
+				label E-MAIL ADDRESS
+				input(class='form-control', name="email")
+			div.form-group
+				label PHONE NUMBER
+				input(class='form-control', name="phone")
+			div.form-group
+				label MESSAGE
+				textarea(class='form-control', rows='3' name="content")
+			button.btn.btn-primary(type='submit') SUBMIT
